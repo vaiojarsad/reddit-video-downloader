@@ -3,10 +3,12 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
-	"github.com/vaiojarsad/reddit-video-downloader/reddit"
 	"log"
 	"os"
+
+	"github.com/spf13/cobra"
+
+	"github.com/vaiojarsad/reddit-video-downloader/reddit"
 )
 
 var (
