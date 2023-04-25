@@ -37,9 +37,5 @@ func (m *FFMPEGMerger) Merge(audioFilename, videoFileName, outputFileName string
 	if err != nil {
 		return fmt.Errorf("error running ffmpeg: %w", err)
 	}
-	err = os.Rename(mergedFileName, outputFileName)
-	if err != nil {
-		return fmt.Errorf("error renaming temp file to output file: %w", err)
-	}
-	return nil
+	return general.Move(mergedFileName, outputFileName)
 }
